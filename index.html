@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image with text Overlay</title>
+    <link rel="stylesheet" href="bootstrap\css\bootstrap.min.css" />
+    <style>
+      /* item styles */
+      #test:hover *, #test:focus *{
+         box-shadow:inset 0 0 2000px #009688;
+      }
+      .item-image {
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 50%;
+        text-align: center;
+      }
+      .item-image img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+      .item-image .text-image{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+      }
+      
+      .item-image span {
+        position: relative;
+        top:35%;
+        margin: auto;
+        color: #000;
+        font-size: 2em;
+        box-shadow: none !important;
+      }
+      .item-content {
+        padding: 15px;
+        background: #72cffa;
+      }
+      .item-text {
+        position: relative;
+        overflow: hidden;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <a href="#">
+            <div class="item-image">
+              <img class="img-responsive center-block" src="images\img1.jpg" />
+            </div>
+           </a>
+        </div>
+        <div class="col-sm-4">
+          <a href="#" id="test">
+            <div class="item-image">
+              <img class="img-responsive center-block" src="images\img2.jpg" />
+              <div class="text-image">
+                <span>Text Inside</span>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a href="#">
+            <div class="item-image">
+              <img class="img-responsive center-block" src="images\img3.jpg" />
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <script src="bootstrap\js\jquery.js"></script>
+    <script src="bootstrap\js\bootstrap.min.js"></script>
+    <script src="bootstrap\js\jQuery.equalHeights.js"></script>
+    <script>
+      $(".container").equalHeights();
+    </script>
+  </body>
+</html>
